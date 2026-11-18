@@ -65,3 +65,4 @@ zuwainvestments.com points at. Do not rename that Worker.
 `sveltia-cms-auth`, which holds the GitHub client ID and secret. Its address is the
 `base_url` at the top of `static/admin/config.yml`. Anyone who should be able to edit
 the site needs a GitHub account with write access to this repository.
+Connected to Cloudflare 18 November 2026.
