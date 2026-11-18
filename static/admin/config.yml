@@ -7,7 +7,7 @@ backend:
   name: github
   repo: ZuwaKasuba/zuwa-website
   branch: main
-  base_url: https://REPLACE-WITH-YOUR-WORKER-URL.workers.dev
+  base_url: https://sveltia-cms-auth.libriszm.workers.dev
 
 publish_mode: simple
 media_folder: "assets/img"
