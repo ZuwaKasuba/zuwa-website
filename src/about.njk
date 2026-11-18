@@ -1,0 +1,105 @@
+---
+layout: layout.njk
+permalink: about.html
+canonical: "about.html"
+active: "about"
+---
+{%- set pg = pages[active] %}
+<section class="page-head">
+  <div class="single" style="background-image:url('{{ pg.background }}')"></div><div class="grad"></div>
+  <div class="wrap">
+    <span class="page-chip"><img src="assets/img/logo-investments.png" alt="Zuwa Investments Limited"></span>
+    <h1>{{ pg.heading | safe }}</h1>
+    <p class="lead">{{ pg.lead | safe }}</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About the group</div>
+  </div>
+</section>
+<section class="section soft">
+  <div class="wrap cgrid" style="align-items:start">
+    <div class="reveal">
+      <span class="eyebrow">From our founder</span>
+      <h2>Building Excellence. Delivering Fresh Starts.</h2>
+      <p>At Zuwa Investments, we believe a project is not truly complete until the client can walk into a clean, safe and habitable environment. That belief led us to combine professional construction with post-construction cleaning, so clients experience a seamless transition from completion to occupancy.</p>
+      <p>In addition to construction and cleaning, we provide supply services for clients who need quality materials, equipment and related products delivered efficiently. Our goal is simple: to build quality spaces, prepare them for immediate use, and provide the support our clients need to bring their visions to life.</p>
+      <p style="font-weight:700;color:var(--navy);margin-bottom:0">Patience Sabi</p>
+      <p style="color:var(--orange);font-weight:600">Managing Director</p>
+    </div>
+    <div class="reveal d1" style="display:flex;flex-direction:column;gap:20px">
+      <div class="feat ac-blue"><h3>Our mission</h3><p>To deliver dependable and integrated construction, cleaning services and supply across Zambia through a group of subsidiaries that share one standard: work worth putting our name on.</p></div>
+      <div class="feat ac-sky"><h3>Our vision</h3><p>To become Southern Africa's most trusted integrated services group by 2035, known for the durability of our work, the fairness of our dealings, and the strength of the people we grow.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <span class="eyebrow reveal">Our core values</span>
+      <h2 class="reveal d1">What we stand for</h2>
+    </div>
+    <div class="grid-auto">
+      <div class="feat ac-gold reveal"><h3>Integrity</h3><p>We keep our word. To clients, staff, suppliers and regulators. Nothing about the group works without this.</p></div>
+      <div class="feat ac-navy reveal d1"><h3>Excellence</h3><p>We aim above the brief. Our reputation is built on the difference between a job done and a job done well.</p></div>
+      <div class="feat ac-orange reveal d2"><h3>Respect</h3><p>For every client, team member and partner. Every trade under our banner is dignified work.</p></div>
+      <div class="feat ac-blue reveal"><h3>Reliability</h3><p>On time, on budget, on specification. The commitments we make are the commitments we honour.</p></div>
+      <div class="feat ac-sky reveal d1"><h3>Growth</h3><p>We build for the long term, not the next transaction. The way we work today should make sense five years from now.</p></div>
+    </div>
+  </div>
+</section>
+
+{%- if collections.team.length %}
+<section class="section navy" id="team">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <span class="eyebrow sky reveal">Our team</span>
+      <h2 class="reveal d1">The people behind the standard</h2>
+      <p class="lead center reveal d2">Experienced leadership across construction, cleaning and supply.</p>
+    </div>
+    <div class="team-grid">
+      {%- set tdelay = ["", " d1", " d2"] %}
+      {%- for m in collections.team %}
+      <div class="tmember reveal{{ tdelay[loop.index0 % 3] }}"><div class="tphoto">{% if m.data.photo %}<img src="{{ m.data.photo }}" alt="{{ m.data.name }}">{% endif %}</div><h4>{{ m.data.name }}</h4><div class="role">{{ m.data.role }}</div></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section">
+  <div class="wrap center">
+    <span class="eyebrow reveal">Leadership</span>
+    <h2 class="reveal d1">Led by a registered professional engineer</h2>
+    <p class="lead center reveal d2">Zuwa Investments is led by a registered professional engineer. Our Managing Director, Patience Sabi, is a Civil Engineer with a Master&rsquo;s in Construction Management. She is registered with the Engineering Registration Board (ERB) and the Engineering Institution of Zambia (EIZ). Every project we take on is guided by sound engineering and held to professional standards.</p>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="wrap center">
+    <span class="eyebrow reveal">Compliance and credentials</span>
+    <h2 class="reveal d1">Registered, certified and insured</h2>
+    <p class="lead center reveal d2" style="margin-bottom:34px">Zuwa operates fully compliant with Zambian regulations. Full certificates are available on request.</p>
+    <div class="badges reveal d2">
+      <span class="badge"><span class="dot"></span>NCC registered, Grade 6</span>
+      <span class="badge"><span class="dot"></span>ZPPA registered supplier</span>
+      <span class="badge"><span class="dot"></span>ZRA tax compliant</span>
+      <span class="badge"><span class="dot"></span>NAPSA compliant</span>
+      <span class="badge"><span class="dot"></span>Workers compensation registered</span>
+      <span class="badge"><span class="dot"></span>Public liability insured</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div class="cbg" style="background-image:url('assets/img/constr-skyline.jpg')"></div><div class="cgr"></div>
+      <span class="eyebrow sky">The next step is a conversation</span>
+      <h2>Work with a group built to last.</h2>
+      <p class="lead center">Whichever service you need, the standard is the same. Let us show you.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <a class="btn btn-primary" href="book.html">Book a service <span class="arw">&rarr;</span></a>
+        <a class="btn btn-outline" href="contact.html">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>

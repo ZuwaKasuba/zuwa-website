@@ -1,0 +1,17 @@
+{
+  "name": "zuwa-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zuwa Investments Limited website. Eleventy build, edited through /admin.",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "deploy": "eleventy && wrangler deploy"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8",
+    "js-yaml": "5.5.0",
+    "wrangler": "4.164.0"
+  }
+}

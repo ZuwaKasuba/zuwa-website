@@ -1,0 +1,208 @@
+# Zuwa Investments Limited, website editor.
+#
+# This file tells the editor what can be changed and where each change is saved.
+# Saving in the editor commits to GitHub, and Cloudflare rebuilds the site.
+
+backend:
+  name: github
+  repo: ZuwaKasuba/zuwa-website
+  branch: main
+  base_url: https://REPLACE-WITH-YOUR-WORKER-URL.workers.dev
+
+publish_mode: simple
+media_folder: "assets/img"
+public_folder: "assets/img"
+
+site_url: https://zuwainvestments.com
+display_url: https://zuwainvestments.com
+logo_url: https://zuwainvestments.com/assets/img/logo-investments.png
+
+collections:
+  # ------------------------------------------------------------ company details
+  - name: settings
+    label: "Company details"
+    files:
+    - name: company
+      label: "Contact details and tagline"
+      file: "src/content/settings/company.yml"
+      description: "These appear in the footer of every page. Change them once here."
+      fields:
+      - { name: name, label: "Company name", widget: string }
+      - { name: tagline, label: "Tagline", widget: string }
+      - { name: phone_display, label: "Telephone, as written", widget: string, hint: "Exactly as it should read on the page, spaces and all." }
+      - { name: phone_link, label: "Telephone, for the dial button", widget: string, hint: "No spaces. Starts with +260." }
+      - { name: whatsapp, label: "WhatsApp number", widget: string, hint: "Digits only, country code first, no plus sign. 260776535559" }
+      - { name: email, label: "Email address", widget: string }
+      - { name: address_line1, label: "Address, first line", widget: string }
+      - { name: address_line2, label: "Address, second line", widget: string }
+      - { name: hours_weekday, label: "Opening hours, weekdays", widget: string }
+      - { name: hours_saturday, label: "Opening hours, Saturday", widget: string }
+      - { name: about_blurb, label: "Short description in the footer", widget: text }
+
+  # ------------------------------------------------------------------- pages
+  - name: pages
+    label: "Pages"
+    description: "The heading, the sentence under it and the photograph at the top of each page."
+    files:
+    - name: "index"
+      label: "Home"
+      file: "src/content/pages/index.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - name: hero_slides
+        label: "Home page slideshow"
+        widget: list
+        field: { name: image, label: Photograph, widget: image }
+        hint: "The photographs that fade in and out behind the heading. Drag to reorder."
+      - { name: hero_eyebrow, label: "Small line above the heading", widget: string }
+      - { name: hero_heading, label: "Main heading", widget: string }
+      - { name: hero_lead, label: "Sentence under the heading", widget: text }
+      - { name: hero_button_1, label: "First button", widget: string, hint: "Links to the booking form." }
+      - { name: hero_button_2, label: "Second button", widget: string, hint: "Jumps to the three companies." }
+    - name: "construction"
+      label: "Construction"
+      file: "src/content/pages/construction.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "cleaning"
+      label: "Cleaning"
+      file: "src/content/pages/cleaning.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "supply"
+      label: "General Supply"
+      file: "src/content/pages/supply.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "build-to-keys"
+      label: "Build-to-Keys"
+      file: "src/content/pages/build-to-keys.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "contractor-cleaning"
+      label: "Contractor cleaning"
+      file: "src/content/pages/contractor-cleaning.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "care-plan"
+      label: "Care Plan"
+      file: "src/content/pages/care-plan.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "projects"
+      label: "Projects"
+      file: "src/content/pages/projects.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "about"
+      label: "About"
+      file: "src/content/pages/about.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "careers"
+      label: "Careers"
+      file: "src/content/pages/careers.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+    - name: "contact"
+      label: "Contact"
+      file: "src/content/pages/contact.yml"
+      fields:
+      - { name: title, label: "Browser tab title", widget: string, hint: "Shows in the browser tab and in Google results. Keep it under 60 characters." }
+      - { name: description, label: "Search description", widget: text, hint: "The grey sentence under the title in Google results. Aim for 150 to 160 characters." }
+      - { name: background, label: "Background photograph", widget: image, hint: "The photograph behind the heading at the top of the page." }
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: lead, label: "Sentence under the heading", widget: text }
+
+  # ---------------------------------------------------------------- portfolio
+  - name: projects
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}} ({{year}})"
+    description: "Each project added here appears on the Projects page, newest first. The section stays hidden while there are none."
+    sortable_fields: [year, title]
+    fields:
+    - { name: title, label: "Project name", widget: string }
+    - { name: sector, label: "Sector", widget: select, options: [Residential, Commercial, Industrial, Institutional, Retail, Healthcare, Education, Hospitality] }
+    - { name: year, label: "Year completed", widget: number, value_type: int, min: 2015, max: 2040 }
+    - { name: summary, label: "What the job was", widget: text, hint: "Two lines. Scope and outcome." }
+    - { name: photo, label: "Photograph", widget: image }
+
+  # --------------------------------------------------------------------- team
+  - name: team
+    label: "Team"
+    label_singular: "Team member"
+    folder: "src/content/team"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{name}} - {{role}}"
+    description: "People listed here appear on the About page in order. The section stays hidden while there are none."
+    sortable_fields: [order, name]
+    fields:
+    - { name: name, label: "Full name", widget: string }
+    - { name: role, label: "Job title", widget: string }
+    - { name: order, label: "Order on the page", widget: number, value_type: int, min: 1, max: 99, hint: "1 appears first." }
+    - { name: photo, label: "Photograph", widget: image }
+
+  # ---------------------------------------------------------------- vacancies
+  - name: careers
+    label: "Vacancies"
+    label_singular: "Vacancy"
+    folder: "src/content/careers"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{role}} - {{business}}"
+    description: "Open roles shown on the Careers page. Switch a role to closed to take it down without deleting it."
+    fields:
+    - { name: role, label: "Job title", widget: string }
+    - { name: business, label: "Which business", widget: select, options: ["Zuwa Construction", "Zuwa Cleaning Services", "Zuwa General Supply", "Zuwa Investments Limited"] }
+    - { name: location, label: "Location", widget: string, default: "Lusaka" }
+    - { name: type, label: "Type", widget: select, options: ["Full time", "Part time", "Contract", "Temporary"] }
+    - { name: summary, label: "What the role involves", widget: text }
+    - { name: open, label: "Currently open", widget: boolean, default: true, hint: "Switch off to remove it from the website." }

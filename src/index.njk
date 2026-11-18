@@ -1,0 +1,160 @@
+---
+layout: layout.njk
+permalink: index.html
+canonical: ""
+active: "index"
+---
+{%- set pg = pages[active] %}
+<section class="hero">
+  <div class="slideshow" data-slideshow="{{ pg.hero_slides | join('|') }}"></div>
+  <div class="grad"></div>
+  <div class="wrap">
+    <span class="eyebrow sky">{{ pg.hero_eyebrow | safe }}</span>
+    <h1>{{ pg.hero_heading | safe }}</h1>
+    <p class="lead">{{ pg.hero_lead | safe }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="book.html">{{ pg.hero_button_1 | safe }} <span class="arw">&rarr;</span></a>
+      <a class="btn btn-outline" href="#companies">{{ pg.hero_button_2 | safe }}</a>
+    </div>
+  </div>
+  <div class="scrollcue"><span>SCROLL</span><span class="line"></span></div>
+</section>
+
+<section class="section soft">
+  <div class="wrap split2">
+    <div class="reveal"><span class="eyebrow">Our purpose</span><h2 style="margin-bottom:12px">Building excellence. Delivering fresh starts.</h2><p class="purpose-note">Zuwa Construction builds it. Zuwa Cleaning Services hands it over ready to use. Zuwa General Supply keeps both of them supplied.</p></div>
+    <div class="reveal d1"><p class="purpose-kicker">Anyone can start a job. We&rsquo;re built to stand behind it.</p><p class="lead" style="max-width:none;margin:0">Zuwa Investments is building more than structures. We&rsquo;re building an institution: a company that will still answer your call ten years from now, honour every warranty, and hold the same standards on our hundredth project as on our first.</p><p class="lead" style="max-width:none;margin:14px 0 0">Whether we&rsquo;re constructing your building, cleaning it once the work is done, or supplying the materials that make it possible, our promise is the same. We do work that lasts, in a way that lasts.</p></div>
+  </div>
+</section>
+
+<section class="section" id="companies">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <span class="eyebrow reveal">The group</span>
+      <h2 class="reveal d1">Three companies under one banner</h2>
+      <p class="lead center reveal d2">Engage one service, two, or all three. Each runs to the same standard and can be coordinated under a single Zuwa account manager.</p>
+    </div>
+    <div class="grid-3">
+      <a class="ccard construction reveal" href="construction.html">
+        <div class="cbg" style="background-image:url('assets/img/constr-crane.jpg')"></div><div class="cshade"></div>
+        <span class="cchip"><img src="assets/img/logo-construction.png" alt="Zuwa Construction"></span>
+        <div class="cbody"><h3>Zuwa Construction</h3><p>New builds, renovations, refurbishment and property maintenance. Houses, shops, offices and institutional buildings.</p><span class="clink">Explore construction <span class="arw">&rarr;</span></span></div>
+      </a>
+      <a class="ccard cleaning reveal d1" href="cleaning.html">
+        <div class="cbg" style="background-image:url('assets/img/clean-spray.jpg')"></div><div class="cshade"></div>
+        <span class="cchip"><img src="assets/img/logo-cleaning.png" alt="Zuwa Cleaning Services"></span>
+        <div class="cbody"><h3>Zuwa Cleaning Services</h3><p>Post-construction cleaning and office and commercial contract cleaning.</p><span class="clink">Explore cleaning <span class="arw">&rarr;</span></span></div>
+      </a>
+      <a class="ccard supply reveal d2" href="supply.html">
+        <div class="cbg" style="background-image:url('assets/img/tech-flat.jpg')"></div><div class="cshade"></div>
+        <span class="cchip"><img src="assets/img/logo-general-supply.png" alt="Zuwa General Supply"></span>
+        <div class="cbody"><h3>Zuwa General Supply</h3><p>Construction materials, cleaning consumables and office equipment and furniture.</p><span class="clink">Explore supply <span class="arw">&rarr;</span></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="picker">
+  <div class="wrap">
+    <div class="center" style="max-width:720px;margin:0 auto 30px">
+      <span class="eyebrow reveal">Start here</span>
+      <h2 class="reveal d1">What do you need?</h2>
+      <p class="lead center reveal d2">Pick one and we will show you what it covers. You can book all three on one account.</p>
+    </div>
+    <div class="picker reveal d1">
+      <div class="picker-tabs"><button class="picker-tab on" type="button" data-pick="construction"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9.5 21v-5h5v5"/></svg></span><span><b>Construction</b><span>Houses, shops, offices and institutional buildings</span></span></button><button class="picker-tab" type="button" data-pick="cleaning"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="9.5" width="7" height="11" rx="2"/><path d="M10.2 9.5V6.5h3.2v3"/><path d="M13.4 6.5h3.1l1.9-1.9"/><path d="M19 7.6h1.6M19 10.2h1.6"/></svg></span><span><b>Cleaning Services</b><span>Post-construction and ongoing contract cleaning</span></span></button><button class="picker-tab" type="button" data-pick="supply"><span class="pt-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5l9-4 9 4-9 4z"/><path d="M3 7.5v9l9 4 9-4v-9"/><path d="M12 11.5v9"/></svg></span><span><b>General Supply</b><span>Materials, consumables and equipment</span></span></button></div>
+      <div class="picker-panel"><div class="pp on" data-panel="construction"><p class="lead" style="margin-bottom:16px">New builds, renovations, refurbishment and property maintenance, run by a registered engineer.</p><ul><li>Site preparation, excavation and foundation works</li><li>Structural works including concrete, blockwork and roofing</li><li>Plumbing and electrical installations</li><li>Finishing: plastering, painting, tiling and fittings</li><li>Project management and quality assurance throughout</li></ul><div class="pp-actions"><a class="btn btn-primary" href="book.html#construction">Book construction <span class="arw">&rarr;</span></a><a class="btn btn-line" href="construction.html">Read more</a></div></div><div class="pp" data-panel="cleaning"><p class="lead" style="margin-bottom:16px">We take a finished building from builders' dust to handover condition, and keep it that way.</p><ul><li>Dust, debris, stains and residue removed from floors, walls and ceilings</li><li>Windows, doors, bathrooms, fixtures and fittings cleaned</li><li>Specialist chemicals that do not damage new finishes</li><li>Final handover clean, ready for inspection or occupation</li><li>Commercial, residential and industrial properties</li></ul><div class="pp-actions"><a class="btn btn-primary" href="book.html#cleaning">Book cleaning services <span class="arw">&rarr;</span></a><a class="btn btn-line" href="cleaning.html">Read more</a></div></div><div class="pp" data-panel="supply"><p class="lead" style="margin-bottom:16px">The materials that make a build possible, delivered when they were promised.</p><ul><li>Structural: cement, aggregates, blocks, reinforcement steel, roofing</li><li>Finishing: timber, boards, paints, tiles, sanitary ware</li><li>Services fittings: plumbing, electrical, HVAC consumables</li><li>Fixings, fasteners, hardware and site consumables</li><li>Standing accounts available for contractors on regular projects</li></ul><div class="pp-actions"><a class="btn btn-primary" href="book.html#supply">Book general supply <span class="arw">&rarr;</span></a><a class="btn btn-line" href="supply.html">Read more</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <span class="eyebrow reveal">Our offers</span>
+      <h2 class="reveal d1">Three ways to work with us</h2>
+      <p class="lead center reveal d2">Packages that put one accountable team behind your build, your handover and your upkeep.</p>
+    </div>
+    <div class="grid-3">
+      <a class="feat ac-blue ocard reveal" href="build-to-keys.html">
+        <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V9l5-3 5 3v12M9 21v-4h2v4"/><path d="M15 21V11l4 2v8"/></svg></div>
+        <h3>Build-to-Keys</h3>
+        <p>One contract from foundation to a clean, snag-free, ready to occupy building, with a fixed handover date and a written warranty.</p>
+        <span class="olink" style="color:var(--orange)">Learn more &rarr;</span>
+      </a>
+      <a class="feat ac-sky ocard reveal d1" href="contractor-cleaning.html">
+        <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg></div>
+        <h3>Contractor cleaning</h3>
+        <p>Post-construction cleaning for other builders. Industrial dust extraction, finish-safe method and a damage guarantee at every handover.</p>
+        <span class="olink" style="color:#1f6f97">Learn more &rarr;</span>
+      </a>
+      <a class="feat ac-gold ocard reveal d2" href="care-plan.html">
+        <div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="10" r="6"/><path d="M8.5 15.5 7 21l5-2.5L17 21l-1.5-5.5"/><path d="M9.5 10l1.7 1.7L15 8"/></svg></div>
+        <h3>Care Plan</h3>
+        <p>Cleaning and maintenance on one monthly fee, with a service-level agreement, guaranteed cover, Clean and Fix, and restocked consumables.</p>
+        <span class="olink" style="color:#a9780b">Learn more &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <span class="eyebrow reveal">Our promise</span>
+      <h2 class="reveal d1">Six reasons clients keep coming back</h2>
+      <p class="lead center reveal d2">There are many contractors and suppliers in Zambia. Here is what makes Zuwa different.</p>
+    </div>
+    <div class="grid-auto">
+      <div class="feat ac-navy reveal"><div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3 3 0 0 1 0 5.8M16.5 19a5.5 5.5 0 0 0-2.3-4.4"/></svg></div><h3>Trained and uniformed teams</h3><p>Every team member completes our internal training, wears branded uniform and carries identification before stepping in front of a client.</p></div>
+      <div class="feat ac-orange reveal d1"><div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Insured and compliant</h3><p>Public liability insurance, and full compliance with Zambian labour, safety and tax regulations. You are contracting peace of mind.</p></div>
+      <div class="feat ac-blue reveal d2"><div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="10" r="6"/><path d="M8.5 15.5 7 21l5-2.5L17 21l-1.5-5.5"/><path d="M9.5 10l1.7 1.7L15 8"/></svg></div><h3>Quality assurance built in</h3><p>Every job is inspected by a supervisor before sign off. We do not consider a job complete until it passes our checklist, not yours.</p></div>
+      <div class="feat ac-sky reveal"><div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19c0-8 6-13 14-13 0 8-5 14-13 14"/><path d="M5 19c3-4 6-6 10-7"/></svg></div><h3>Responsible sourcing</h3><p>Materials from vetted local and regional suppliers, and eco certified cleaning products prioritised across our operations.</p></div>
+      <div class="feat ac-gold reveal d1"><div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div><h3>Flexible scheduling</h3><p>Daily, weekly, monthly or one off. Daytime, evening, weekend or public holiday. We work around your operations.</p></div>
+      <div class="feat ac-navy reveal d2"><div class="ficon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div><h3>Local and accountable</h3><p>A Zambian business, owned and operated locally. If something goes wrong, you reach a decision maker the same day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section navy">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="num"><span data-count="3">0</span></div><div class="lab">Integrated companies</div></div>
+      <div class="stat reveal d1"><div class="num"><span data-count="5">0</span></div><div class="lab">Core values</div></div>
+      <div class="stat reveal d2"><div class="num"><span data-count="100">0</span><span class="u">%</span></div><div class="lab">Zambian owned</div></div>
+      <div class="stat reveal d3"><div class="num">2035</div><div class="lab">Our vision year</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <span class="eyebrow reveal">Our five step process</span>
+      <h2 class="reveal d1">From first call to ongoing partnership</h2>
+    </div>
+    <div class="steps roadmap reveal">
+      <div class="pstep reveal"><div class="pn">1</div><h3>Consultation</h3><p>We take time to understand your requirements, objectives, timelines and priorities.</p></div>
+      <div class="pstep reveal d1"><div class="pn">2</div><h3>Proposal</h3><p>A clear scope, approach, timeline and cost. No hidden charges, no unnecessary complexity.</p></div>
+      <div class="pstep reveal d2"><div class="pn">3</div><h3>Mobilisation</h3><p>We mobilise the people, equipment and materials, and coordinate a smooth start.</p></div>
+      <div class="pstep reveal d1"><div class="pn">4</div><h3>Delivery</h3><p>We deliver the agreed scope safely and to standard, keeping you informed throughout.</p></div>
+      <div class="pstep reveal d2"><div class="pn">5</div><h3>Review</h3><p>We review outcomes with you and use your feedback to strengthen the relationship.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div class="cbg" style="background-image:url('assets/img/constr-skyline.jpg')"></div><div class="cgr"></div>
+      <span class="eyebrow sky">The next step is a conversation</span>
+      <h2>Ready when you are.</h2>
+      <p class="lead center">Start a construction project, prepare a completed building for handover, or source materials and equipment. Book online in a few minutes.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <a class="btn btn-primary" href="book.html">Book a service <span class="arw">&rarr;</span></a>
+        <a class="btn btn-outline" href="contact.html">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>

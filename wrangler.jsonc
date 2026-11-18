@@ -1,0 +1,10 @@
+{
+  // Deploys the built site to the Worker that already serves zuwainvestments.com.
+  // The name must stay as it is: it is the Worker the custom domain points at.
+  "name": "1stdeploy2026",
+  "compatibility_date": "2026-11-18",
+  "assets": {
+    "directory": "./_site",
+    "not_found_handling": "404-page"
+  }
+}

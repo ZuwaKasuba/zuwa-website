@@ -1,0 +1,54 @@
+---
+layout: layout.njk
+permalink: construction.html
+canonical: "construction.html"
+active: "construction"
+dropactive: "services"
+---
+{%- set pg = pages[active] %}
+<section class="page-head">
+  <div class="single" style="background-image:url('{{ pg.background }}')"></div><div class="grad"></div>
+  <div class="wrap">
+    <span class="page-chip"><img src="assets/img/logo-construction.png" alt=""></span>
+    <h1>{{ pg.heading | safe }}</h1>
+    <p class="lead">{{ pg.lead | safe }}</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Zuwa Construction</div>
+  </div>
+</section>
+<section class="section soft">
+  <div class="wrap">
+    <div class="center" style="max-width:760px;margin:0 auto 32px">
+      <span class="eyebrow reveal">What we do</span>
+      <h2 class="reveal d1">From ground breaking to handover</h2>
+      <p class="lead center reveal d2">We manage projects from single family homes to multi unit developments, and from cosmetic refurbishments to full structural interventions.</p>
+      <p class="reveal d2" style="margin-top:14px;font-weight:700;color:var(--orange)">We build and renovate buildings such as houses, shops, offices and warehouses. We do not take on road construction or civil infrastructure works.</p>
+    </div>
+    <div class="svc-block reveal">
+  <div class="svc-media"><img src="assets/img/constr-arch.jpg" alt="New construction"></div>
+  <div><h3 style="font-size:1.5rem">New construction</h3><p>Ground up construction of residential homes, commercial buildings and industrial buildings, managed from foundation to finish.</p><ul class="svc-list"><li>Site preparation, excavation and foundation works</li><li>Structural works including concrete, blockwork and roofing</li><li>Plumbing and electrical installations</li><li>Finishing: plastering, painting, tiling and fittings</li><li>Project management and quality assurance throughout</li></ul></div>
+</div>
+    <div class="svc-block rev reveal">
+  <div class="svc-media"><img src="assets/img/hardhat-blueprint.jpg" alt="Renovations and refurbishment"></div>
+  <div><h3 style="font-size:1.5rem">Renovations and refurbishment</h3><p>Bringing existing buildings back to life, whether to modernise, extend a footprint or reconfigure an interior.</p><ul class="svc-list"><li>Interior remodelling of kitchens, bathrooms, living spaces and office layouts</li><li>Structural alterations: wall removals, extensions, roof reconfigurations</li><li>Systems upgrades: electrical rewiring, plumbing overhauls, HVAC</li></ul></div>
+</div>
+    <div class="svc-block reveal">
+  <div class="svc-media"><img src="assets/img/constr-crane.jpg" alt="Property maintenance"></div>
+  <div><h3 style="font-size:1.5rem">Property maintenance</h3><p>The ongoing care that keeps property values intact, for estates, commercial buildings, rental portfolios and industrial sites.</p><ul class="svc-list"><li>Scheduled preventative maintenance programmes</li><li>Reactive repairs across all major trades</li><li>Small works and improvements as they arise</li><li>Emergency response for urgent structural or safety issues</li></ul></div>
+</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div class="cbg" style="background-image:url('assets/img/constr-arch.jpg')"></div><div class="cgr"></div>
+      <span class="eyebrow sky">The next step is a conversation</span>
+      <h2>Start your build.</h2>
+      <p class="lead center">Tell us about your project and we will prepare a clear proposal with scope, timeline and cost.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <a class="btn btn-primary" href="book.html">Book a service <span class="arw">&rarr;</span></a>
+        <a class="btn btn-outline" href="contact.html">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>

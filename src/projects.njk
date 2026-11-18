@@ -1,0 +1,66 @@
+---
+layout: layout.njk
+permalink: projects.html
+canonical: "projects.html"
+active: "projects"
+---
+{%- set pg = pages[active] %}
+<section class="page-head">
+  <div class="single" style="background-image:url('{{ pg.background }}')"></div><div class="grad"></div>
+  <div class="wrap">
+    <span class="page-chip"><img src="assets/img/logo-investments.png" alt="Zuwa Investments Limited"></span>
+    <h1>{{ pg.heading | safe }}</h1>
+    <p class="lead">{{ pg.lead | safe }}</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Projects</div>
+  </div>
+</section>
+<section class="section soft">
+  <div class="wrap">
+    <div class="center" style="max-width:860px;margin:0 auto 34px">
+      <span class="eyebrow reveal">Experience that leads the work</span>
+      <h2 class="reveal d1">Delivered by our leadership</h2>
+      <p class="lead center reveal d2">Zuwa Investments is led by a registered professional engineer. Our Managing Director, Patience Sabi, is a Civil Engineer with a Master&rsquo;s in Construction Management. She is registered with the Engineering Registration Board (ERB) and the Engineering Institution of Zambia (EIZ). Every project we take on is guided by sound engineering and held to professional standards.</p>
+      <p class="lead center reveal d2">Zuwa is a young company, and we are open about that. The projects below were delivered by our Managing Director at the organisations named, before she founded Zuwa.</p>
+    </div>
+    <div class="grid-auto">
+      <div class="feat ac-blue reveal"><span class="ptag tg-blue">Banking</span><h3>ABSA Bank, East Park branch</h3><p>Dramoll Limited. Refurbishment, site engineering and project supervision.</p></div>
+      <div class="feat ac-sky reveal d1"><span class="ptag tg-sky">Hospitality</span><h3>Pyramid Hotel</h3><p>Estim Construction Limited. Construction.</p></div>
+      <div class="feat ac-gold reveal d2"><span class="ptag tg-gold">Healthcare</span><h3>National Heart Hospital</h3><p>Oxygen plant building, to clinical-grade construction standards.</p></div>
+      <div class="feat ac-navy reveal"><span class="ptag tg-navy">Healthcare</span><h3>Incinerator facilities, Chipata and Kabwe</h3><p>United Nations Office for Project Services. Chipata Level One Hospital, and Kabwe Women, Newborn and Children&rsquo;s Hospital.</p></div>
+      <div class="feat ac-orange reveal d1"><span class="ptag tg-orange">Institutional</span><h3>ZAMRA facilities</h3><p>United Nations Office for Project Services, for the Zambia Medicines Regulatory Authority.</p></div>
+    </div>
+  </div>
+</section>
+
+{%- if collections.projects.length %}
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:30px">
+      <span class="eyebrow reveal">Our portfolio</span>
+      <h2 class="reveal d1">Zuwa projects</h2>
+      <p class="lead center reveal d2">We photograph every job, before and after, and collect a testimonial at each handover.</p>
+    </div>
+    <div class="proj-grid">
+      {%- set ptags = ["tg-blue", "tg-sky", "tg-gold", "tg-navy", "tg-orange"] %}
+      {%- for p in collections.projects %}
+      <div class="proj reveal"><div class="pphoto">{% if p.data.photo %}<img src="{{ p.data.photo }}" alt="{{ p.data.title }}">{% endif %}</div><div class="pbody"><span class="ptag {{ ptags[loop.index0 % 5] }}">{{ p.data.sector }}</span><h3>{{ p.data.title }}</h3><p>{{ p.data.summary }}</p></div></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div class="cbg" style="background-image:url('assets/img/constr-skyline.jpg')"></div><div class="cgr"></div>
+      <span class="eyebrow sky">The next step is a conversation</span>
+      <h2>Want to be our next case study?</h2>
+      <p class="lead center">Start a project with us and we will build it to a standard worth photographing.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <a class="btn btn-primary" href="book.html">Book a service <span class="arw">&rarr;</span></a>
+        <a class="btn btn-outline" href="contact.html">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+---
+layout: layout.njk
+permalink: contact.html
+canonical: "contact.html"
+active: "contact"
+---
+{%- set pg = pages[active] %}
+<section class="page-head">
+  <div class="single" style="background-image:url('{{ pg.background }}')"></div><div class="grad"></div>
+  <div class="wrap">
+    <span class="page-chip"><img src="assets/img/logo-investments.png" alt="Zuwa Investments Limited"></span>
+    <h1>{{ pg.heading | safe }}</h1>
+    <p class="lead">{{ pg.lead | safe }}</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact us</div>
+  </div>
+</section>
+<section class="section soft">
+  <div class="wrap cgrid">
+    <div class="reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let us start a conversation</h2>
+      <div class="cinfo-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 3h3l1.5 5-2 1.5a12 12 0 0 0 6 6l1.5-2 5 1.5V21a2 2 0 0 1-2.2 2A18 18 0 0 1 4 7 2 2 0 0 1 6 3z"/></svg></div><div><div class="k">Telephone</div><div class="v"><a href="tel:+260776535559">+260 776 535 559</a></div></div></div>
+      <div class="cinfo-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v11H9l-5 4z"/></svg></div><div><div class="k">WhatsApp</div><div class="v"><a href="https://wa.me/260776535559" target="_blank" rel="noopener">+260 776 535 559</a></div></div></div>
+      <div class="cinfo-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></div><div><div class="k">Email</div><div class="v"><a href="mailto:info@zuwainvestments.com">info@zuwainvestments.com</a></div></div></div>
+      <div class="cinfo-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div><div><div class="k">Office</div><div class="v">Plot 609/E/61/C/2, Hybrid Road, Chamba Valley, Lusaka</div></div></div>
+      <div class="cinfo-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div><div><div class="k">Hours</div><div class="v">Mon to Fri 07:30 to 17:30 &middot; Sat 08:00 to 13:00</div></div></div>
+      <div style="margin-top:26px"><a class="btn btn-primary" href="book.html">Book a service <span class="arw">&rarr;</span></a></div>
+    </div>
+    <div class="reveal d1">
+      <iframe class="map" width="100%" height="100%" style="min-height:420px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Zuwa office location"
+        src="https://www.google.com/maps?q=Chamba%20Valley%2C%20Lusaka%2C%20Zambia&output=embed"></iframe>
+      <p class="map-fallback">Map not loading? <a href="https://www.google.com/maps?q=Chamba%20Valley%2C%20Lusaka%2C%20Zambia" target="_blank" rel="noopener">Open it in Google Maps</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div class="cbg" style="background-image:url('assets/img/constr-skyline.jpg')"></div><div class="cgr"></div>
+      <span class="eyebrow sky">The next step is a conversation</span>
+      <h2>Prefer to book online?</h2>
+      <p class="lead center">Choose construction, cleaning or supply, pick a slot, and we will confirm it.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <a class="btn btn-primary" href="book.html">Book a service <span class="arw">&rarr;</span></a>
+        <a class="btn btn-outline" href="contact.html">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
