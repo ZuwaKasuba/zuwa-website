@@ -1,14 +1,11 @@
-# Details that appear on every page. Change them here and they change everywhere.
 name: Zuwa Investments Limited
 tagline: Building Excellence. Delivering Fresh Starts.
-phone_display: "+260 776 535 559"
-phone_link: "+260776535559"
-whatsapp: "260776535559"
+phone_display: +260 776 535 559
+phone_link: '+260776535559'
+whatsapp: '260776535559'
 email: info@zuwainvestments.com
 address_line1: Plot 609/E/61/C/2, Hybrid Road,
 address_line2: Chamba Valley, Lusaka
-hours_weekday: Mon to Fri 07:30 to 17:30
-hours_saturday: Sat 08:00 to 13:00
-about_blurb: >-
-  An integrated services group delivering dependable construction, cleaning and
-  supply across Zambia, under one standard: work worth putting our name on.
+hours_weekday: Mon to Fri 08:00 to 17:00
+hours_saturday: Sat 08:00 to 12:00
+about_blurb: 'An integrated services group delivering dependable construction, cleaning and supply across Zambia, under one standard: work worth putting our name on.'
